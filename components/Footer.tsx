@@ -8,23 +8,23 @@ const ImageSection = () => {
                     {/* Centered Pictures */}
                     <div className="flex flex-wrap justify-center mb-4">
                         <div className="m-4">
-                            <img src="/ios.png" alt="iOS" className="h-32 md:h-40"/>
+                            <img src="/images/FootImg/ios.png" alt="iOS" className="h-32 md:h-40"/>
                         </div>
                         <div className="m-4">
-                            <img src="/android.png" alt="Android" className="h-32 md:h-40"/>
+                            <img src="/images/FootImg/android.png" alt="Android" className="h-32 md:h-40"/>
                         </div>
                         <div className="m-4">
-                            <img src="/androidtv.png" alt="Android TV" className="h-32 md:h-40"/>
+                            <img src="/images/FootImg/androidtv.png" alt="Android TV" className="h-32 md:h-40"/>
                         </div>
                     </div>
 
                     {/* Pictures in Between */}
                     <div className="flex justify-center">
                         <div className="m-4">
-                            <img src="/appletv.png" alt="Apple TV" className="h-32 md:h-40"/>
+                            <img src="/images/FootImg/appletv.png" alt="Apple TV" className="h-32 md:h-40"/>
                         </div>
                         <div className="m-4">
-                            <img src="/roku.png" alt="Roku" className="h-32 md:h-40"/>
+                            <img src="/images/FootImg/roku.png" alt="Roku" className="h-32 md:h-40"/>
                         </div>
                     </div>
                 </div>
@@ -112,13 +112,13 @@ const FooterSection = () => {
                             <span className="text-center">
                                 Powered by
                                 <a href="https://derana.lk/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                    <img src="/derana.png" alt="Derana" className="h-16" />
+                                    <img src="/images/FootLogo/derana.png" alt="Derana" className="h-16" />
                                 </a>
                             </span>
                             <span className="text-center">
                                 Solution by
                                 <a href="https://rumex.lk/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                    <img src="/logo.png" alt="Rumex" className="h-12" />
+                                    <img src="/images/FootLogo/logo.png" alt="Rumex" className="h-12" />
                                 </a>
                             </span>
                         </div>
@@ -129,19 +129,19 @@ const FooterSection = () => {
                             {/* Social Media Icons */}
                             <div className="flex space-x-10 mr-20"> {/* Increased space between icons */}
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="/facebook.svg" alt="Facebook" className="w-8 h-8" />
+                                    <img src="/images/FootLogo/facebook.svg" alt="Facebook" className="w-8 h-8" />
                                 </a>
                                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="/youtube.svg" alt="YouTube" className="w-8 h-8" />
+                                    <img src="/images/FootLogo/youtube.svg" alt="YouTube" className="w-8 h-8" />
                                 </a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="/instagram.svg" alt="Instagram" className="w-8 h-8" />
+                                    <img src="/images/FootLogo/instagram.svg" alt="Instagram" className="w-8 h-8" />
                                 </a>
                                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="/twitter.svg" alt="Twitter" className="w-8 h-8" />
+                                    <img src="/images/FootLogo/twitter.svg" alt="Twitter" className="w-8 h-8" />
                                 </a>
                                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="/wordpress.svg" alt="LinkedIn" className="w-8 h-8" />
+                                    <img src="/images/FootLogo/wordpress.svg" alt="LinkedIn" className="w-8 h-8" />
                                 </a>
                             </div>
 

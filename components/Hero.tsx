@@ -267,7 +267,7 @@ const Hero = () => {
                 <div className="posters-container flex overflow-x-auto space-x-4">
                     <div className="poster">
                         <img
-                            src="/Entertainment1.jpg"
+                            src="/images/Entertainment/Entertainment1.jpg"
                             alt="category"/>
                         <div className="overlay">
                             <button className="watch-list-button">+ Watch List</button>
@@ -276,7 +276,7 @@ const Hero = () => {
                     </div>
                     <div className="poster">
                         <img
-                            src="/Entertainment2.jpg"
+                            src="/images/Entertainment/Entertainment2.jpg"
                             alt="category"/>
                         <div className="overlay">
                             <button className="watch-list-button">+ Watch List</button>
@@ -285,7 +285,7 @@ const Hero = () => {
                     </div>
                     <div className="poster">
                         <img
-                            src="/Entertainment3.jpg"
+                            src="/images/Entertainment/Entertainment3.jpg"
                             alt="category"/>
                         <div className="overlay">
                             <button className="watch-list-button">+ Watch List</button>
@@ -302,7 +302,7 @@ const Hero = () => {
                     <div className="posters-container flex overflow-x-auto space-x-4">
                         <div className="poster">
                             <img
-                                src="/Video1.jpg"
+                                src="/images/Video/Video1.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -311,7 +311,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Video2.jpg"
+                                src="/images/Video/Video2.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -320,7 +320,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Video3.jpg"
+                                src="/images/Video/Video3.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -329,7 +329,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Video4.jpg"
+                                src="/images/Video/Video4.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -347,7 +347,7 @@ const Hero = () => {
                     <div className="posters-container flex overflow-x-auto space-x-4">
                         <div className="poster">
                             <img
-                                src="/Doc1.jpg"
+                                src="/images/Documentary/Doc1.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -356,7 +356,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Doc2.jpg"
+                                src="/images/Documentary/Doc2.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -365,7 +365,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Doc3.jpg"
+                                src="/images/Documentary/Doc3.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
@@ -374,7 +374,7 @@ const Hero = () => {
                         </div>
                         <div className="poster">
                             <img
-                                src="/Doc4.jpg"
+                                src="/images/Documentary/Doc4.jpg"
                                 alt="category"/>
                             <div className="overlay">
                                 <button className="watch-list-button">+ Watch List</button>
