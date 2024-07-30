@@ -19,10 +19,12 @@
       }
     ],
     "paths": {
-      "@/constants": ["constants/index.ts"], // Adjust this path if needed
-      "@components/*": ["components/*"], // Adjust based on an actual path
-      "@/*": ["*"] // Ensure this covers all base paths
-    }
+      "@/constants": ["constants/index.ts"],
+      "@components/*": ["components/*"],
+      "@/*": ["*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["react", "react-dom", "react-icons"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/declarations.d.ts"],
   "exclude": ["node_modules"]
