@@ -112,7 +112,7 @@ const Hero = () => {
                     <Image
                         src={slides[currentSlide].img}
                         alt="Slide Image"
-                        fill
+                        layout="fill"
                         className="object-cover transition-opacity duration-1000"
                     />
                     <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -121,40 +121,47 @@ const Hero = () => {
                         <Image
                             src={slides[currentSlide].titleImg}
                             alt="Title Image"
-                            width={533}
-                            height={400}
-                            className={`transition-opacity duration-800 ${showTitleImg ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-50px]'}`}
+                            width={400}
+                            height={300}
+                            className={`transition-opacity duration-1000 transform ${showTitleImg ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}
                         />
                     </div>
                     <div className="absolute bottom-0 left-0 p-4 text-white">
                         {/* Description, Genres, and Duration */}
                         <div
-                            className={`transition-transform duration-800 ${showDescription ? 'translate-y-0' : 'translate-y-full'} ${showDescription ? 'opacity-100' : 'opacity-0'}`}
-                        >
-                            <div className="text-lg font-bold mb-2">
+                            className={`transition-transform duration-1000 ${showDescription ? 'translate-y-0' : 'translate-y-full'} ${showDescription ? 'opacity-100' : 'opacity-0'}`}>
+                            <div className="text-xl font-bold mb-2">
                                 {slides[currentSlide].description}
                             </div>
                             <div className="flex flex-wrap gap-2 text-gray-400 mb-2">
                                 {slides[currentSlide].genres.map((genre, i) => (
                                     <span key={i} className="bg-gray-800 bg-opacity-70 p-1 rounded">
-                                        {genre}
-                                    </span>
+                                    {genre}
+                                </span>
                                 ))}
                             </div>
-                            <div className="text-sm text-gray-300">
+                            <div className="text-lg text-gray-300">
                                 {slides[currentSlide].duration}
                             </div>
+                        </div>
+                        <div
+                            className={`flex gap-4 mt-4 ${showButtons ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
+                            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">More Info
+                            </button>
+                            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Watch
+                                List
+                            </button>
                         </div>
                     </div>
                 </div>
                 <button
-                    className={`absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full`}
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full"
                     onClick={prevSlide}
                 >
                     &#8249;
                 </button>
                 <button
-                    className={`absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full`}
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full"
                     onClick={nextSlide}
                 >
                     &#8250;
@@ -321,35 +328,35 @@ const Hero = () => {
                 <div className={"flex overflow-x-auto space-x-4"}>
                     Entertainment
                 </div>
-                    <div className="posters-container flex overflow-x-auto space-x-4">
-                        <div className="poster">
-                            <img
-                                src="/images/Entertainment/Entertainment1.jpg"
-                                alt="category"/>
-                            <div className="overlay">
-                                <button className="watch-list-button">+ Watch List</button>
-                                <button className="play-button">Play</button>
-                            </div>
-                        </div>
-                        <div className="poster">
-                            <img
-                                src="/images/Entertainment/Entertainment2.jpg"
-                                alt="category"/>
-                            <div className="overlay">
-                                <button className="watch-list-button">+ Watch List</button>
-                                <button className="play-button">Play</button>
-                            </div>
-                        </div>
-                        <div className="poster">
-                            <img
-                                src="/images/Entertainment/Entertainment3.jpg"
-                                alt="category"/>
-                            <div className="overlay">
-                                <button className="watch-list-button">+ Watch List</button>
-                                <button className="play-button">Play</button>
-                            </div>
+                <div className="posters-container flex overflow-x-auto space-x-4">
+                    <div className="poster">
+                        <img
+                            src="/images/Entertainment/Entertainment1.jpg"
+                            alt="category"/>
+                        <div className="overlay">
+                            <button className="watch-list-button">+ Watch List</button>
+                            <button className="play-button">Play</button>
                         </div>
                     </div>
+                    <div className="poster">
+                        <img
+                            src="/images/Entertainment/Entertainment2.jpg"
+                            alt="category"/>
+                        <div className="overlay">
+                            <button className="watch-list-button">+ Watch List</button>
+                            <button className="play-button">Play</button>
+                        </div>
+                    </div>
+                    <div className="poster">
+                        <img
+                            src="/images/Entertainment/Entertainment3.jpg"
+                            alt="category"/>
+                        <div className="overlay">
+                            <button className="watch-list-button">+ Watch List</button>
+                            <button className="play-button">Play</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/*Video Channels*/}
