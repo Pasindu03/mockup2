@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="nav flexBetween max-container padding-container relative z-50 py-5">
           <div className="flex items-center">
               <Link href="/">
-                  <Image src="/dflix-logo-large.png" alt="logo" width={86} height={34}/>
+                  <Image src="/images/NavBar/dflix-logo-large.png" alt="logo" width={86} height={34}/>
               </Link>
           </div>
 

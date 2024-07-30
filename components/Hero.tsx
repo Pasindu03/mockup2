@@ -1,5 +1,8 @@
 "use client";
 import Image from 'next/image';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -9,34 +12,59 @@ const Hero = () => {
     const [showDetails, setShowDetails] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
     const slides = [
         {
-            img: '/images/slider1.jpg',
-            titleImg: '/images/Tinyslider1.png',
+            img: '/images/Sliders/slider1.jpg',
+            titleImg: '/images/Sliders/Tinyslider1.png',
+            description: 'Sports Channel...',
+            genres: ['Sports', 'Cricket'],
+            duration: '1hr 30min'
+
+        },
+        {
+            img: '/images/Sliders/slider2.jpg',
+            titleImg: '/images/Sliders/Tinyslider2.png',
+            description: 'New Slide Description...',
+            genres: ['New Genre 1', 'New Genre 2'],
+            duration: '2hr 15min'
+        },
+        {
+            img: '/images/Sliders/slider3.jpg',
+            titleImg: '/images/Sliders/Tinyslider3.png',
             description: 'Nonimi_Asha_Poya_Teli_Film...',
             genres: ['Dflix Original', 'Drama', 'Family'],
             duration: '2hr 0min'
         },
         {
-            img: '/images/slider2.jpg',
-            titleImg: '/images/Tinyslider2.png',
+            img: '/images/Sliders/slider4.jpg',
+            titleImg: '/images/Sliders/Tinyslider4.png',
             description: 'The film is the biopic of JVP leader Rohana Wijeweera...',
             genres: ['Drama', 'Biography', 'Historical', 'Family'],
             duration: '1hr 45min'
-        },
-        {
-            img: '/images/slider3.jpg',
-            titleImg: '/images/Tinyslider3.png',
-            description: 'Sports Channel...',
-            genres: ['Sports', 'Cricket'],
-            duration: '1hr 30min'
-        },
-        {
-            img: '/images/slider4.jpg',
-            titleImg: '/images/Tinyslider4.png',
-            description: 'New Slide Description...',
-            genres: ['New Genre 1', 'New Genre 2'],
-            duration: '2hr 15min'
         },
     ];
 
@@ -136,164 +164,195 @@ const Hero = () => {
             {/*Posters*/}
             <div className="my-10 px-4">
                 <div>
-                    <h2 className={"bold-10"}>Dflix Originals</h2>
+                    <h1 className="py-5">Dflix Originals</h1>
                 </div>
-                <div className="flex overflow-x-auto space-x-4">
+                <Slider {...settings}>
                     {/* Poster 1 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait1.jpg"
-                            alt="Poster 1"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Nonimi Asha</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2"> {/* Adjust px-2 to control spacing between posters */}
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait1.jpg"
+                                alt="Poster 1"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Nonimi Asha</div>
+                                <div className="text-gray-400 mb-2">Genre: Drama</div>
+                                <div className="text-gray-400 mb-4">Runtime: 2h 10m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 2 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait8.jpg"
-                            alt="Poster 2"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait2.jpg"
+                                alt="Poster 2"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Sasara Bandana</div>
+                                <div className="text-gray-400 mb-2">Genre: Action</div>
+                                <div className="text-gray-400 mb-4">Runtime: 1h 55m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 3 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait3.jpg"
-                            alt="Poster 3"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait3.jpg"
+                                alt="Poster 3"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Ambalama</div>
+                                <div className="text-gray-400 mb-2">Genre: Comedy</div>
+                                <div className="text-gray-400 mb-4">Runtime: 1h 45m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 4 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait4.jpg"
-                            alt="Poster 3"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait4.jpg"
+                                alt="Poster 4"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">As</div>
+                                <div className="text-gray-400 mb-2">Genre: Thriller</div>
+                                <div className="text-gray-400 mb-4">Runtime: 2h 5m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 5 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait5.jpg"
-                            alt="Poster 3"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait5.jpg"
+                                alt="Poster 5"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Sasala</div>
+                                <div className="text-gray-400 mb-2">Genre: Romance</div>
+                                <div className="text-gray-400 mb-4">Runtime: 2h 20m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 6 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait6.jpg"
-                            alt="Poster 3"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait6.jpg"
+                                alt="Poster 6"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Mahagedara</div>
+                                <div className="text-gray-400 mb-2">Genre: Sci-Fi</div>
+                                <div className="text-gray-400 mb-4">Runtime: 2h 30m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
 
                     {/* Poster 7 */}
-                    <div className="relative w-48 h-72 flex-shrink-0 group">
-                        <Image
-                            src="/Potrait7.jpg"
-                            alt="Poster 3"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md transition-transform duration-300 transform group-hover:scale-105"
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                            <div className="text-white mb-2">Poster Details Here</div>
-                            <button className="bg-red-500 text-white py-2 px-4 rounded mb-2">+ Watch List</button>
-                            <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                    <div className="px-2">
+                        <div className="relative w-[300px] h-[400px] flex-shrink-0 group">
+                            <Image
+                                src="/images/Potrait/Potrait7.jpg"
+                                alt="Poster 7"
+                                fill
+                                className="rounded-md transition-transform duration-300 transform group-hover:scale-105 object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <Image src="/images/Potrait/watch-list.png" alt="Watch List" width={32} height={32}
+                                       className="mx-auto mb-2"/>
+                                <div className="text-white mb-2">Akka</div>
+                                <div className="text-gray-400 mb-2">Genre: Horror</div>
+                                <div className="text-gray-400 mb-4">Runtime: 1h 45m</div>
+                                <button className="bg-green-500 text-white py-2 px-4 rounded">Play</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Slider>
             </div>
 
+            {/*Entertainment*/}
             <div className="my-10 px-4">
-                <div>
+                <div className={"flex overflow-x-auto space-x-4"}>
                     Entertainment
                 </div>
-                <div className="posters-container flex overflow-x-auto space-x-4">
-                    <div className="poster">
-                        <img
-                            src="/images/Entertainment/Entertainment1.jpg"
-                            alt="category"/>
-                        <div className="overlay">
-                            <button className="watch-list-button">+ Watch List</button>
-                            <button className="play-button">Play</button>
+                    <div className="posters-container flex overflow-x-auto space-x-4">
+                        <div className="poster">
+                            <img
+                                src="/images/Entertainment/Entertainment1.jpg"
+                                alt="category"/>
+                            <div className="overlay">
+                                <button className="watch-list-button">+ Watch List</button>
+                                <button className="play-button">Play</button>
+                            </div>
+                        </div>
+                        <div className="poster">
+                            <img
+                                src="/images/Entertainment/Entertainment2.jpg"
+                                alt="category"/>
+                            <div className="overlay">
+                                <button className="watch-list-button">+ Watch List</button>
+                                <button className="play-button">Play</button>
+                            </div>
+                        </div>
+                        <div className="poster">
+                            <img
+                                src="/images/Entertainment/Entertainment3.jpg"
+                                alt="category"/>
+                            <div className="overlay">
+                                <button className="watch-list-button">+ Watch List</button>
+                                <button className="play-button">Play</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="poster">
-                        <img
-                            src="/images/Entertainment/Entertainment2.jpg"
-                            alt="category"/>
-                        <div className="overlay">
-                            <button className="watch-list-button">+ Watch List</button>
-                            <button className="play-button">Play</button>
-                        </div>
-                    </div>
-                    <div className="poster">
-                        <img
-                            src="/images/Entertainment/Entertainment3.jpg"
-                            alt="category"/>
-                        <div className="overlay">
-                            <button className="watch-list-button">+ Watch List</button>
-                            <button className="play-button">Play</button>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            {/*Video Channels*/}
             <div className="my-10 px-4">
                 <div>
                     Video Channel
@@ -339,6 +398,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+            {/*Documentary*/}
             <div className="my-10 px-4">
                 <div>
                     Documentary

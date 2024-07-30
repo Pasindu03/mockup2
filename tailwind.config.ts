@@ -47,6 +47,10 @@ module.exports = {
       borderRadius: {
         '5xl': '40px',
       },
+      aspectRatio: {
+        'poster': '338 / 450',
+        'poster-small': '169 / 225',
+      },
     },
   },
   plugins: [],
